@@ -1,26 +1,20 @@
 class Solver
   def factorial(number)
-    if number <0
-      throw "Number must be positive"
-    end
-    if number == 0 || number == 1
-      return 1
-    end
+    throw 'Number must be positive' if number.negative?
+    return 1 if [0, 1].include?(number)
+
     factorial(number - 1) * number
   end
+
   def reverse(word)
     word.reverse
   end
+
   def fizzbuzz(number)
-    if number%3==0 && number%5==0
-      return "fizzbuzz"
-    end
-    if number%3==0
-      return "fizz"
-    end
-    if number%5==0
-      return "buzz"
-    end
+    return 'fizzbuzz' if (number % 3).zero? && (number % 5).zero?
+    return 'fizz' if (number % 3).zero?
+    return 'buzz' if (number % 5).zero?
+
     number
   end
 end
