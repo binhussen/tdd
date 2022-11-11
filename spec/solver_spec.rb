@@ -14,3 +14,21 @@ describe Solver do
   Solver.new.reverse("hello").should == "olleh"
   end
 end
+
+ describe Solver do
+    it "should return fizz" do
+    Solver.new.fizzbuzz(3).should == "fizz"
+    end
+    
+    it "should return buzz" do
+      Solver.new.fizzbuzz(10).should == "buzz"
+      end
+
+      it "should return fizzbuzz" do
+        Solver.new.fizzbuzz(30).should == "fizzbuzz"
+        end
+
+        it "should return number" do
+        Solver.new.fizzbuzz(7).should == (7)
+        end
+      end
