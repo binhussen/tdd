@@ -1,6 +1,6 @@
 class Solver
   def factorial(number)
-    throw 'Number must be positive' if number.negative?
+    raise 'Number must be positive' if number.negative?
     return 1 if [0, 1].include?(number)
 
     factorial(number - 1) * number
