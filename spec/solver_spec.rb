@@ -31,7 +31,7 @@ describe Solver do
     end
 
     it 'should return number' do
-      Solver.new.fizzbuzz(7).should == (7)
+      Solver.new.fizzbuzz(7).should == ('7')
     end
   end
 end
